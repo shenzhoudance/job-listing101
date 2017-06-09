@@ -5,10 +5,9 @@ class JobsController < ApplicationController
     @jobs = Job.all
   end
 
-def show
-     @job = Job.find(params[:id])
-   end
- end
+  def show
+    @job = Job.find(params[:id])
+  end
 
  def new
    @job = Job.new
@@ -49,4 +48,6 @@ def show
 
  def job_params
    params.require(:job).permit(:title, :description)
+ end
+
  end
